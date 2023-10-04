@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO10</title>
+</head>
+<body>
+    <center><h1>CUAL ES TU COLOR?</h1></center>
+</body>
+</html>
+ <script>
+    function salto_de_linea() {
+        document.write("<br>");
+    }
+
+    function mostrarMensaje(mensaje) {
+        document.write(mensaje);
+        salto_de_linea();
+    }
+
+    alert("TU COLOR SERA ALEATORIO?");
+
+    var equipos = [];
+    var cantidad = parseInt(prompt("CUANTOS COLORES QUIERE INGRESAR?"));
+    
+    for (var contador = 1; contador <= cantidad; contador++) {
+        var color = prompt("Ingrese el COLOR " + contador);
+        equipos.push(color);
+    }
+
+    console.log(equipos);
+
+    var indiceAleatorio = Math.floor(Math.random() * equipos.length);
+    var colorAleatorio = equipos[indiceAleatorio];
+    
+    mostrarMensaje("Colores ingresados: " + equipos.join(", "));
+    mostrarMensaje("Color ALEATORIO seleccionado: " + colorAleatorio);
+</script>

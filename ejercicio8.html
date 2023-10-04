@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>ARRAY o VECTOR</h1></center>
+</body>
+</html>
+<script>
+    function salto_de_linea(){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+    function mostrarMensaje(mensaje){
+
+        document.write(mensaje);
+        salto_de_linea();
+    }
+    var arry=["lunes","martes","miercoles","jueves","viernes","sabado","domingo"]
+    var bienvenido= "dias de la semana"
+    mostrarMensaje(bienvenido)
+    for(var i=0;i<arry.length; i++){
+        document.write(arry[i])
+        salto_de_linea();
+    }
+    for(var i=0;i<arry.length; i=i+2){
+        document.write(arry[i])
+        salto_de_linea();
+        
+    }
+</script>
