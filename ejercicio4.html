@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4</title>
+</head>
+<body>
+    <center><h1>Uso de promt</h1></center>
+</body>
+</html>
+<script>
+    function salto_de_linea(){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+    function mostrarMensaje(mensaje){
+
+        document.write(mensaje);
+        salto_de_linea();
+    }
+    alert("Suma de dos numeros introducidos por teclado ")
+    let n1=parseInt(prompt("numero 1"))
+    //prompt sirve para introducir por teclado una variable 
+    //tambien permite mandar un mensaje de orientacion
+    let n2=parseInt(prompt("numero 2"))
+    function sumar(a,b){
+        return a+b
+    }
+    function resta(a,b){
+        return a-b
+    }
+    function Multi(a,b){
+        return a*b
+    }
+    function divi(a,b){
+        return a/b
+    }
+    function cuadrado(a){
+        return a*a
+    }
+    let res= sumar(n1,n2)
+    let res1= resta(n1,n2)
+    let res2= Multi(n1,n2)
+    let res3= divi(n1,n2)
+    let res4= cuadrado(n1,n2)
+    alert(res1)
+    console.log(res1)
+    mostrarMensaje(res1)
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio7</title>
+</head>
+<body>
+    <center><h1>E JOGO E MACACO HECHO PARA MACACOS </h1></center>
+</body>
+</html>
+<script>
+//Juego de la ruleta rusa, donde escojan un numero y si toca mueres
+//donde los numeros seran aleatorio ya que el juego es de suerte 
+function salto_de_linea() {
+    document.write("<br>");
+}
+
+function mostrarMensaje(mensaje) {
+    document.write(mensaje);
+    salto_de_linea();
+}
+
+    var disparo = Math.floor(Math.random() * 5)+1; 
+    var proba = parseInt(prompt("ESCOGE UN NUMERO DE 1 al 6 "));
+
+while (proba !== disparo) {
+    RuletaRusa();
+}
+
+function RuletaRusa() {
+    var proba = Math.floor(Math.random() * 5) + 1;
+    var disparo = Math.floor(Math.random() * 5) + 1;
+    if (proba === disparo) {
+        alert("¡Boom! Perdiste FALLECISTE!!");
+    } else {
+        alert("Sigue JUGANDO !!!");
+    }
+}
+
+
+        
+</script>

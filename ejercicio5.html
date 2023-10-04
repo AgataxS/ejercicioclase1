@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+ <center><h1>RANDOM????GAAAA??SOPA DE MACACOO?</h1></center>   
+</body>
+</html>
+<script>
+  function salto_de_linea(){
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+    }
+    function mostrarMensaje(mensaje){
+
+        document.write(mensaje);
+        salto_de_linea();
+    }
+    var numeritorandom = Math.round(Math.random()*10)
+    console.log(numeritorandom)
+    //if (numeritorandom >0){
+      //  mostrarMensaje(numeritorandom)
+    //}else{
+      //  mostrarMensaje("EL NUMERO ES MENOR QUE 0")
+    //}
+    var cont=0;
+    while(cont<numeritorandom)
+    {
+        alert(numeritorandom)
+        console.log(numeritorandom)
+        mostrarMensaje(numeritorandom)
+        cont++; 
+    }
+
+
+</script>
