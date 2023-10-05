@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion 1</title>
+</head>
+<body>
+    <center><h1>Evaluacion1</h1></center>
+    
+</body>
+</html>
+<script>
+    // Genera un juego de búsqueda del tesoro en un mapa de matriz 5x5 se debe poder generar de manera random una matriz y la posición del tesoro
+    function NumeritoRandom() {
+        return Math.round(Math.random() * 5) + 1; // Generar números entre 1 y 5 aleatorios que se redondee al mayor numero
+    }
+    //matriz para poder saber el lugar del tesorito 
+    var matriz1 = [
+        [1, 2, 3, 4, 5],
+        [1, 2, 3, 4, 5],
+        [1, 2, 3, 4, 5],
+        [1, 2, 3, 4, 5],
+        [1, 2, 3, 4, 5]
+    ];
+    //damos una funcion a nuestrar cordenadas del tesoro que estas estaran en posiciones x y 
+    const tesoroX = NumeritoRandom();
+    const tesoroY = NumeritoRandom();
+   // alert(tesoroX); //en caso de que se necesite saber los valores y hacer trampa o para verificar que si funciona
+    //alert(tesoroY);
+    //a la matriz le asignaremos las posiciones y le restaremos 1 para que esta sea de 1 a 5 y no generalmente como es de 0 a 4 e tambio le diremos que es iguala un caracter
+    matriz1[tesoroX - 1][tesoroY - 1] = " ";
+    //mostraremos en pantalla despues de finalizar los intentos la matriz y la ubicacion del tesoro
+    document.write("Posición del tesoro: Fila " + tesoroX + ", Columna " + tesoroY + "<br>");
+    var intentos = 3;
+    //aqui generamos una variable de intentos y creamos un while para empezar a realizar el juego
+    while (intentos > 0) {
+        //con for la fila que tenemos que ira incrementando se separara hasta llegar a 5 y con join estamos separando por espacios
+        for (var i = 0; i < 5; i++) {
+            document.write(matriz1[i].join(" ") + "<br>");
+        }
+        //pedimos las cordenadas de nuestro tesorito
+        const x = parseInt(prompt("Ingrese la fila (1-5):"));
+        const y = parseInt(prompt("Ingrese la columna (1-5):"));
+        //aqui solo se valida si el tesoroX y tesoroY son igual a los datos ingresados 
+        if (x === tesoroX && y === tesoroY) {
+            document.write("¡Felicidades! Ganaste. Encontraste el TESORO en la fila " + tesoroX + ", columna " + tesoroY + ".<br>");
+            break;
+        } else {
+            document.write("Intento incorrecto. Te quedan " + (--intentos) + " intentos.<br>");
+        }
+    }
+    //en este if solo nos mostrara si ya no tenemos mas intentos 
+    if (intentos === 0) {
+        document.write("Agotaste tus intentos. El tesoro estaba en la fila " + tesoroX + ", columna " + tesoroY + ".<br>");
+    }
+</script>
