@@ -42,7 +42,9 @@
         //pedimos las cordenadas de nuestro tesorito
         const x = parseInt(prompt("Ingrese la fila (1-5):"));
         const y = parseInt(prompt("Ingrese la columna (1-5):"));
+        //una ves ingresado generado nuestro NumeritoRandom toma los valores de la matriz y estos no se muestra en nuestro Document.write
         //aqui solo se valida si el tesoroX y tesoroY son igual a los datos ingresados 
+    
         if (x === tesoroX && y === tesoroY) {
             document.write("¡Felicidades! Ganaste. Encontraste el TESORO en la fila " + tesoroX + ", columna " + tesoroY + ".<br>");
             break;
